@@ -1,6 +1,6 @@
 # RMS - Backend
 
-<div align="justify"> The Todo backend is developed using Go, PostgreSQL, and the Chi router. It includes features like user registration, login, logout, profile management, and account deletion. Users can create, view, and manage todos, including marking todos as completed, viewing incomplete and completed todos, and deleting all todos. The backend uses JWT-based session management to ensure secure authentication and authorization for all user interactions. This design provides a robust structure for user and todo management in a secure and efficient manner. <div>
+<div align="justify"> The RMS backend has three user roles: admin, sub-admin, and users. Admins have full access, sub-admins can manage resources they have created, and users can perform regular user-level actions. User attributes include name, email, and multiple addresses (with latitude/longitude coordinates). Admins and sub-admins also have name and email attributes and can hold multiple roles. The system provides various APIs, including fetching all restaurants, fetching restaurant dishes, calculating restaurant distance from a user's address, listing sub-admins (admin only), and listing or creating users, restaurants, and dishes (admin and sub-admin, with role-based restrictions). It also includes login and logout functionality, with secure access managed by role-based permissions. JWT-based session management ensures secure authentication and authorization, providing a robust and efficient structure for user interactions. <div>
 
 # Tech Stack Used
 
