@@ -1,0 +1,624 @@
+{
+	"info": {
+		"_postman_id": "6cdb7ee3-017e-4f64-8443-a00e27b877df",
+		"name": "rms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36131425"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Saket Anand\",\n    \"email\": \"saket@gmail.com\",\n    \"password\": \"saket@123\",\n    \"address\": [\n        {\n            \"address\": \"punjabi bagh, delhi\",\n            \"latitude\": 24.7362,\n            \"longitude\": 69.1168 \n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{v1}}/admin/create-user",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"admin",
+								"create-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{v1}}/admin/all-users",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"admin",
+								"all-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create sub admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Priti Kumari\",\n    \"email\": \"priti@gmail.com\",\n    \"password\": \"priti@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{v1}}/admin/create-sub-admin",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"admin",
+								"create-sub-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all sub admins",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{v1}}/admin/all-sub-admin",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"admin",
+								"all-sub-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create restaurant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Good Luck\",\n    \"address\": \"Dwarka Mod, Sector 10\",\n    \"latitude\": 51.873,\n    \"longitude\": 46.587\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{v1}}/admin/create-restaurant",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"admin",
+								"create-restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all restaurants",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{v1}}/admin/all-restaurants",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"admin",
+								"all-restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create dish",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Veg Momos\",\n    \"price\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{v1}}/admin/:restaurantId/",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"admin",
+								":restaurantId",
+								""
+							],
+							"variable": [
+								{
+									"key": "restaurantId",
+									"value": "2a7001ad-fa27-40d4-af7e-e5a2f828f582"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all dishes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{v1}}/admin/all-dishes",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"admin",
+								"all-dishes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sub-admin",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Priyam Jain\",\n    \"email\": \"priyam@gmail.com\",\n    \"password\": \"priyam@123\",\n    \"address\": [\n        {\n            \"address\": \"Noida sector 62, UP\",\n            \"latitude\": 34.7362,\n            \"longitude\": 39.1168 \n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{v1}}/sub-admin/create-user",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"sub-admin",
+								"create-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{v1}}/sub-admin/all-users",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"sub-admin",
+								"all-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create restaurant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Good Luck\",\n    \"address\": \"Dwarka Mod, Sector 10\",\n    \"latitude\": 51.873,\n    \"longitude\": 46.587\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{v1}}/sub-admin/create-restaurant",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"sub-admin",
+								"create-restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all restaurants",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{v1}}/sub-admin/all-restaurants",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"sub-admin",
+								"all-restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create dish",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Veg Momos\",\n    \"price\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{v1}}/sub-admin/:restaurantId/",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"sub-admin",
+								":restaurantId",
+								""
+							],
+							"variable": [
+								{
+									"key": "restaurantId",
+									"value": "2a7001ad-fa27-40d4-af7e-e5a2f828f582"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all dishes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{v1}}/sub-admin/all-dishes",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"sub-admin",
+								"all-dishes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get all restaurants",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{v1}}/user/all-restaurants",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"user",
+								"all-restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all dishes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{v1}}/user/all-dishes",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"user",
+								"all-dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "calculate distance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userAddressId\": \"35878ba2-9a08-4331-879d-bc60ad2fdd92\",\n    \"restaurantAddressId\": \"2a7001ad-fa27-40d4-af7e-e5a2f828f582\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{v1}}/user/calculate-distance",
+							"host": [
+								"{{v1}}"
+							],
+							"path": [
+								"user",
+								"calculate-distance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let currentToken = pm.environment.get(\"token\");",
+							"",
+							"let newToken = pm.response.json().token;",
+							"",
+							"if (newToken !== currentToken) {",
+							"    pm.environment.set(\"token\", newToken)",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"yeshank@gmail.com\",\n    \"password\": \"yeshank@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{v1}}/login",
+					"host": [
+						"{{v1}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{v1}}/logout",
+					"host": [
+						"{{v1}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get dishes by restaurant",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"restaurantId\": \"3269e884-3756-4ed2-8798-f3b6b5ced76e\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{v1}}/dishes-by-restaurant",
+					"host": [
+						"{{v1}}"
+					],
+					"path": [
+						"dishes-by-restaurant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
